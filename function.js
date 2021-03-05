@@ -1,25 +1,34 @@
-const typeConversionWithCase = (num) =>
+const summator = (sum) =>
 {
-    //проверка, евляется ли число num целым
-    if (Number.isInteger(num)) {
-        switch (num) 
+    if (Number.isInteger(sum)) 
+    {
+         for(let i=1; i <= sum; i++)
         {
-            case 5:     return "пять"
-            case 13:    return "тринадцать"
-            case 22:    return "двадцать два"
-            case 35:    return "тридцать пять"          
-            case 98:    return "девяносто восемь"
-
-            default: return num;
-        }
+            
+            for (let char of "s")
+            {
+                switch (i) 
+                {                
+                case 5:     i++; console.log("пять"); break;
+                case 13:    i++; console.log("тринадцать"); break;
+                case 22:    i++; console.log("двадцать два"); break;
+                case 35:    i++; console.log("тридцать пять"); break;   
+                case 98:    i++; console.log("девяносто восемь"); break;
+                }
+            } 
+            console.log(i);
+        }    
     }
-    return 'Введите целое число';
+    else
+    {
+     console.log('Введите целое число!');
+    }
+   
+    return "Программа работает корректно";
 }
 
-console.log(typeConversionWithCase(1));
-console.log(typeConversionWithCase(5));
-console.log(typeConversionWithCase(13));
-console.log(typeConversionWithCase(22));
-console.log(typeConversionWithCase(35));
-console.log(typeConversionWithCase(98));
-console.log(typeConversionWithCase(100));
+console.log(summator(100));
+
+
+
+
